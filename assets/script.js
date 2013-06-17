@@ -6,10 +6,10 @@ $(document).ready(function() {
 	
 	$('#container').click(function(){
 		if(hide){
-			$('#bar').slideDown('fast');
+			$('#bar').stop().slideDown('fast');
 			hide = false;
 		}else{
-			$('#bar').slideUp('fast');
+			$('#bar').stop().slideUp('fast');
 			hide = true;
 		}
 	});
@@ -17,11 +17,11 @@ $(document).ready(function() {
 	$('.list ul').hide();
 	
 	$('.list').mouseover(function(){
-		$('ul', this).slideDown('fast');
+		$('ul', this).stop().slideDown('fast');
 	});
 	
 	$('.list').mouseleave(function(){
-		$('ul', this).delay(300).slideUp('fast');
+		$('ul', this).delay(300).stop().slideUp('fast');
 	});
 	
 });
